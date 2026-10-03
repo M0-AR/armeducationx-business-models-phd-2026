@@ -1,0 +1,29 @@
+{
+  "experiment": "E3_partnership_network",
+  "nodes": 17,
+  "edges": 23,
+  "arm_out_strength": 65,
+  "arm_ecosystem_share": 0.739,
+  "top_betweenness": [
+    [
+      "Arm",
+      0.0
+    ],
+    [
+      "AWS",
+      0.0
+    ],
+    [
+      "Azure",
+      0.0
+    ]
+  ],
+  "reach_from_arm": 17,
+  "fragmentation_if_arm_removed": 0.647,
+  "assertions": {
+    "arm_is_top_hub": true,
+    "arm_share_gt_0_6": true,
+    "removal_fragments_gt_0_3": true
+  },
+  "PASS": true
+}

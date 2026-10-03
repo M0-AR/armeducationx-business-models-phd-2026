@@ -1,0 +1,11 @@
+{
+  "experiment": "E5_model_selector",
+  "n": 12,
+  "correct": 12,
+  "accuracy": 1.0,
+  "example_pivot": "Pivot Flexible-Startup -> Total-Access-CSS: progressive platformization (Filosa 3-phase).",
+  "assertions": {
+    "accuracy_ge_0_83": true
+  },
+  "PASS": true
+}

@@ -1,0 +1,23 @@
+services:
+  research:
+    build: .
+    container_name: armeducationx-phd-2026
+    volumes:
+      - ./data:/app/data
+      - ./papers:/app/papers
+    environment:
+      - PYTHONUNBUFFERED=1
+      - SEC_USER_AGENT=phd-research-contact@example.com
+      - OPENALEX_EMAIL=phd-research@example.com
+    command: python -m src.experiments.benchmark_suite
+
+  lab:
+    build: .
+    container_name: armeducationx-lab
+    volumes:
+      - ./data:/app/data
+      - ./papers:/app/papers
+    ports:
+      - "8888:8888"
+    command: tail -f /dev/null
+    profiles: ["lab"]

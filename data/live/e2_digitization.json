@@ -1,0 +1,23 @@
+{
+  "experiment": "E2_digitization_benchmark",
+  "n": 18,
+  "correct": 18,
+  "accuracy": 1.0,
+  "confusion": {
+    "digitization": {
+      "digitization": 6
+    },
+    "digitalization": {
+      "digitalization": 5
+    },
+    "transformation": {
+      "transformation": 7
+    }
+  },
+  "disruption_recall": 1.0,
+  "assertions": {
+    "accuracy_ge_0_78": true,
+    "disruption_recall_ge_0_8": true
+  },
+  "PASS": true
+}

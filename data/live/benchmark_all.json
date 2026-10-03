@@ -1,0 +1,244 @@
+{
+  "repo": "armeducationx-business-models-phd-2026",
+  "utc": "2026-10-03T18:11:13.960308Z",
+  "overall_PASS": true,
+  "results": {
+    "e1": {
+      "experiment": "E1_arm_licensing_annuity",
+      "fy26": {
+        "revenue_m": 4920,
+        "royalty_pct": 0.531,
+        "license_m": 2307,
+        "royalty_m": 2613
+      },
+      "q1fy27": {
+        "revenue_m": 1290,
+        "royalty_pct": 0.555
+      },
+      "annuity_ratio_royalty_over_license": 1.133,
+      "royalty_share_q1fy27": 0.555,
+      "premium_ladder_vs_v8": {
+        "v8": 1.0,
+        "v9": 2.0,
+        "css": 4.0
+      },
+      "quotes": {
+        "ARM": {
+          "current": 307.49,
+          "last_close": 292.34,
+          "pe_ttm": 316.99,
+          "market_cap": 328398864384,
+          "name": "Arm Holdings plc",
+          "live": true,
+          "ts": "2026-10-03T18:10:59.631347Z"
+        },
+        "NVDA": {
+          "current": 233.95,
+          "last_close": 230.86,
+          "pe_ttm": 29.57,
+          "market_cap": 5649190617088,
+          "name": "NVIDIA Corporation",
+          "live": true,
+          "ts": "2026-10-03T18:11:02.280751Z"
+        },
+        "QCOM": {
+          "current": 184.87,
+          "last_close": 182.09,
+          "pe_ttm": 21.15,
+          "market_cap": 197452333056,
+          "name": "QUALCOMM Incorporated",
+          "live": true,
+          "ts": "2026-10-03T18:11:04.995865Z"
+        },
+        "INTC": {
+          "current": 119.33,
+          "last_close": 120.0,
+          "pe_ttm": 57.86,
+          "market_cap": 630790946816,
+          "name": "Intel Corporation",
+          "live": true,
+          "ts": "2026-10-03T18:11:06.088819Z"
+        },
+        "AMD": {
+          "current": 633.91,
+          "last_close": 615.73,
+          "pe_ttm": 44.1,
+          "market_cap": 266000000000,
+          "name": "Advanced Micro Devices",
+          "live": true,
+          "ts": "2026-10-03T18:11:07.037289Z"
+        }
+      },
+      "peer_pe_ttm": {
+        "ARM": 316.99,
+        "NVDA": 29.57,
+        "QCOM": 21.15,
+        "INTC": 57.86,
+        "AMD": 44.1
+      },
+      "agi_pipeline_vs_fy26_revenue": 0.407,
+      "assertions": {
+        "annuity_ratio_gt_1": true,
+        "royalty_share_rising": true,
+        "css_is_4x_v8": true,
+        "agi_pipeline_material_gt_30pct": true
+      },
+      "PASS": true
+    },
+    "e2": {
+      "experiment": "E2_digitization_benchmark",
+      "n": 18,
+      "correct": 18,
+      "accuracy": 1.0,
+      "confusion": {
+        "digitization": {
+          "digitization": 6
+        },
+        "digitalization": {
+          "digitalization": 5
+        },
+        "transformation": {
+          "transformation": 7
+        }
+      },
+      "disruption_recall": 1.0,
+      "assertions": {
+        "accuracy_ge_0_78": true,
+        "disruption_recall_ge_0_8": true
+      },
+      "PASS": true
+    },
+    "e3": {
+      "experiment": "E3_partnership_network",
+      "nodes": 17,
+      "edges": 23,
+      "arm_out_strength": 65,
+      "arm_ecosystem_share": 0.739,
+      "top_betweenness": [
+        [
+          "Arm",
+          0.0
+        ],
+        [
+          "AWS",
+          0.0
+        ],
+        [
+          "Azure",
+          0.0
+        ]
+      ],
+      "reach_from_arm": 17,
+      "fragmentation_if_arm_removed": 0.647,
+      "assertions": {
+        "arm_is_top_hub": true,
+        "arm_share_gt_0_6": true,
+        "removal_fragments_gt_0_3": true
+      },
+      "PASS": true
+    },
+    "e4": {
+      "experiment": "E4_market_trends",
+      "quotes": {
+        "ARM": {
+          "current": 307.49,
+          "last_close": 292.34,
+          "pe_ttm": 316.99,
+          "market_cap": 328398864384,
+          "name": "Arm Holdings plc",
+          "live": true,
+          "ts": "2026-10-03T18:11:08.004899Z"
+        },
+        "NVDA": {
+          "current": 233.95,
+          "last_close": 230.86,
+          "pe_ttm": 29.57,
+          "market_cap": 5649190617088,
+          "name": "NVIDIA Corporation",
+          "live": true,
+          "ts": "2026-10-03T18:11:08.990801Z"
+        },
+        "QCOM": {
+          "current": 184.87,
+          "last_close": 182.09,
+          "pe_ttm": 21.15,
+          "market_cap": 197452333056,
+          "name": "QUALCOMM Incorporated",
+          "live": true,
+          "ts": "2026-10-03T18:11:09.948008Z"
+        },
+        "INTC": {
+          "current": 119.33,
+          "last_close": 120.0,
+          "pe_ttm": 57.86,
+          "market_cap": 630790946816,
+          "name": "Intel Corporation",
+          "live": true,
+          "ts": "2026-10-03T18:11:10.713288Z"
+        }
+      },
+      "fx": {
+        "base": "USD",
+        "rates": {
+          "EUR": 0.89087,
+          "GBP": 0.75753,
+          "JPY": 157.67
+        },
+        "date": "2026-10-02",
+        "live": true
+      },
+      "rd": {
+        "live": true,
+        "latest": {
+          "indicator": {
+            "id": "GB.XPD.RSDV.GD.ZS",
+            "value": "Research and development expenditure (% of GDP)"
+          },
+          "country": {
+            "id": "US",
+            "value": "United States"
+          },
+          "countryiso3code": "USA",
+          "date": "2023",
+          "value": 3.44716,
+          "unit": "",
+          "obs_status": "",
+          "decimal": 2
+        },
+        "series": {
+          "2023": 3.44716,
+          "2022": 3.48736,
+          "2021": 3.4689,
+          "2020": 3.41788,
+          "2019": 3.14297,
+          "2018": 2.98956,
+          "2017": 2.88315,
+          "2016": 2.83677,
+          "2015": 2.77328,
+          "2014": 2.70882
+        }
+      },
+      "neoverse_acceleration_vs_lifetime_avg": 2.22,
+      "royalty_yoy": 2.0,
+      "rd_slope_pp_per_year_2010_2023": 0.0564,
+      "assertions": {
+        "neoverse_accelerating_gt_2x": true,
+        "rd_trend_positive": true,
+        "fx_live_or_snapshot_present": true,
+        "arm_quote_positive": true
+      },
+      "PASS": true
+    },
+    "e5": {
+      "experiment": "E5_model_selector",
+      "n": 12,
+      "correct": 12,
+      "accuracy": 1.0,
+      "example_pivot": "Pivot Flexible-Startup -> Total-Access-CSS: progressive platformization (Filosa 3-phase).",
+      "assertions": {
+        "accuracy_ge_0_83": true
+      },
+      "PASS": true
+    }
+  }
+}

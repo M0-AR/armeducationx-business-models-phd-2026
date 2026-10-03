@@ -1,0 +1,82 @@
+{
+  "experiment": "E1_arm_licensing_annuity",
+  "fy26": {
+    "revenue_m": 4920,
+    "royalty_pct": 0.531,
+    "license_m": 2307,
+    "royalty_m": 2613
+  },
+  "q1fy27": {
+    "revenue_m": 1290,
+    "royalty_pct": 0.555
+  },
+  "annuity_ratio_royalty_over_license": 1.133,
+  "royalty_share_q1fy27": 0.555,
+  "premium_ladder_vs_v8": {
+    "v8": 1.0,
+    "v9": 2.0,
+    "css": 4.0
+  },
+  "quotes": {
+    "ARM": {
+      "current": 307.49,
+      "last_close": 292.34,
+      "pe_ttm": 316.99,
+      "market_cap": 328398864384,
+      "name": "Arm Holdings plc",
+      "live": true,
+      "ts": "2026-10-03T18:10:59.631347Z"
+    },
+    "NVDA": {
+      "current": 233.95,
+      "last_close": 230.86,
+      "pe_ttm": 29.57,
+      "market_cap": 5649190617088,
+      "name": "NVIDIA Corporation",
+      "live": true,
+      "ts": "2026-10-03T18:11:02.280751Z"
+    },
+    "QCOM": {
+      "current": 184.87,
+      "last_close": 182.09,
+      "pe_ttm": 21.15,
+      "market_cap": 197452333056,
+      "name": "QUALCOMM Incorporated",
+      "live": true,
+      "ts": "2026-10-03T18:11:04.995865Z"
+    },
+    "INTC": {
+      "current": 119.33,
+      "last_close": 120.0,
+      "pe_ttm": 57.86,
+      "market_cap": 630790946816,
+      "name": "Intel Corporation",
+      "live": true,
+      "ts": "2026-10-03T18:11:06.088819Z"
+    },
+    "AMD": {
+      "current": 633.91,
+      "last_close": 615.73,
+      "pe_ttm": 44.1,
+      "market_cap": 266000000000,
+      "name": "Advanced Micro Devices",
+      "live": true,
+      "ts": "2026-10-03T18:11:07.037289Z"
+    }
+  },
+  "peer_pe_ttm": {
+    "ARM": 316.99,
+    "NVDA": 29.57,
+    "QCOM": 21.15,
+    "INTC": 57.86,
+    "AMD": 44.1
+  },
+  "agi_pipeline_vs_fy26_revenue": 0.407,
+  "assertions": {
+    "annuity_ratio_gt_1": true,
+    "royalty_share_rising": true,
+    "css_is_4x_v8": true,
+    "agi_pipeline_material_gt_30pct": true
+  },
+  "PASS": true
+}

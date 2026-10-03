@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Arm Business Models — Live Benchmark Lab | preview</title>
+<meta name="description" content="Understand Arm-style IP business models in 10 minutes and verify every number on live 2026 market data."/>
+<style>
+:root{--bg:#0b1020;--bg2:#141b36;--card:#1a2342;--line:#2a3560;--txt:#eef1ff;--mut:#aab3d5;--acc:#7c6cff;--grn:#00c49a;--blu:#5b8def;--pnk:#ff6f61;--yel:#ffc542}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;color:var(--txt);background:radial-gradient(1200px 600px at 20% -10%,#24306b 0%,transparent 60%),radial-gradient(1000px 500px at 90% 0%,#3b1f6e 0%,transparent 55%),var(--bg);line-height:1.6}
+a{color:#b9aFFF}.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.hero{padding:64px 0 28px;text-align:center}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:6px 14px;color:var(--mut);font-size:13px;background:rgba(255,255,255,.04)}
+h1{font-size:clamp(30px,5vw,54px);line-height:1.08;margin:18px 0 10px;letter-spacing:-.5px}.grad{background:linear-gradient(90deg,#9d8cff,#5bdcc0,#7fb2ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--mut);max-width:760px;margin:0 auto;font-size:17px}.badges{margin:18px 0;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}.badge{border:1px solid var(--line);background:#101735;border-radius:8px;padding:5px 10px;font-size:13px}.cta{margin:22px 0;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.btn{border-radius:12px;padding:12px 20px;font-weight:700;text-decoration:none}.btn-p{background:linear-gradient(90deg,var(--acc),#4a9bff);color:#fff}.btn-g{border:1px solid var(--line);color:var(--txt);background:rgba(255,255,255,.05)}
+.grid{display:grid;gap:14px}.g4{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:820px){.g4,.g3,.g2{grid-template-columns:1fr}}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:16px;padding:18px}.k{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut)}.v{font-size:30px;font-weight:800;margin:4px 0}.s{color:var(--mut);font-size:14px}.ok{color:var(--grn);font-weight:700}.sec{padding:26px 0}h2{font-size:26px;margin:0 0 6px}h3{margin:14px 0 6px}pre{background:#0d1330;border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto;font-size:13.5px}code{color:#d7dcff}table{width:100%;border-collapse:collapse;font-size:14px}th,td{border:1px solid var(--line);padding:9px 10px;text-align:left}th{background:#131a3a}img{max-width:100%;border-radius:12px;border:1px solid var(--line)}.steps{counter-reset:s}.step{border:1px solid var(--line);border-radius:14px;padding:14px;background:rgba(255,255,255,.03)}.step b{color:#fff}.demo{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}@media(max-width:820px){.demo{grid-template-columns:1fr}}
+canvas{width:100%;border-radius:12px;border:1px solid var(--line);background:#0d1330}footer{color:var(--mut);padding:30px 0 60px;text-align:center;font-size:13px}.toc{columns:2;font-size:14px}@media(max-width:600px){.toc{columns:1}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="hero">
+<div class="pill">MIT open source · Docker one-command reproduce · Live 2026 market data</div>
+<h1>How a chip company that <span class="grad">makes nothing</span> powers billions of devices</h1>
+<p class="sub">This lab turns the 6-week technology-business course into <b>5 runnable experiments</b>. Every chart below is produced by code and checked against live stock, currency and development data. Copy two commands and you reproduce all of it.</p>
+<div class="badges">
+<span class="badge">✅ 5/5 benchmarks PASS</span><span class="badge">⚖️ MIT</span><span class="badge">🐳 docker compose up</span><span class="badge">📊 live Yahoo · ECB · World Bank</span><span class="badge">🎬 demo GIF 119 KB</span>
+</div>
+<div class="cta">
+<a class="btn btn-p" href="#quickstart">▶ Run it in 2 minutes</a>
+<a class="btn btn-g" href="#demo">🎬 Watch the 30-sec demo</a>
+<a class="btn btn-g" href="docs/demo.gif">⬇ GIF</a>
+</div>
+<p class="s">CEO summary in 20 seconds: Arm licenses chip blueprints once, then collects a small fee on <b>every chip shipped for a decade</b> (royalty 53%→55% of revenue). Newer blueprints pay <b>2× then 4×</b>. A network of <b>1000+ partners + 22M developers</b> makes leaving costly. That is why software gravity beats factory ownership — and this repo lets you measure it.</p>
+</div>
+
+<div class="sec" id="metrics">
+<h2>📊 Live scoreboard <span class="s">— executed 2026-10-03, see <code>data/live/</code></span></h2>
+<div class="grid g4">
+<div class="card"><div class="k">Royalty / license</div><div class="v">1.133×</div><div class="s">Annuity growing: 53.1% → 55.5% <span class="ok">PASS</span></div></div>
+<div class="card"><div class="k">Blueprint premium</div><div class="v">4.0×</div><div class="s">v8 → v9 2× → CSS 4× <span class="ok">PASS</span></div></div>
+<div class="card"><div class="k">Network gravity</div><div class="v">73.9%</div><div class="s">Remove hub → 64.7% fragments <span class="ok">PASS</span></div></div>
+<div class="card"><div class="k">Market acceleration</div><div class="v">2.22×</div><div class="s">Neoverse run-rate vs history <span class="ok">PASS</span></div></div>
+</div>
+</div>
+
+<div class="sec" id="demo">
+<h2>🎬 Demo — what runs when you type one command</h2>
+<div class="demo">
+<div class="card">
+<h3 style="margin-top:0">30-second silent tour (no install needed to preview)</h3>
+<canvas id="cv" width="640" height="300"></canvas>
+<p class="s">Above: live canvas replays the royalty-compounding loop. Below: the exact GIF embedded in the README (autoplays on GitHub, 119 KB, under the 25 MB limit).</p>
+<img src="docs/demo.gif" alt="Demo animation of royalty annuity compounding"/>
+<p class="s">Video path: GitHub READMEs autoplay GIFs but strip raw <code>&lt;video&gt;</code>. So we ship <b>GIF in README</b> + <b>full narrated tour in <code>preview.html</code></b> + optional <code>docs/demo.mp4</code> you can record with any screen recorder. To record your own: <code>docker compose up</code>, capture 30 s, export GIF &lt;10 s / &lt;5 MB for fastest load.</p>
+</div>
+<div class="card">
+<h3 style="margin-top:0">Transcript (read while it plays)</h3>
+<p><b>0–5s:</b> License once → royalties for years. <b>5–12s:</b> Upgrade ladder pays more per chip. <b>12–20s:</b> Partners + developers lock it in. <b>20–30s:</b> Trends confirm acceleration. Then the selector tells <i>you</i> which model fits your idea.</p>
+<pre><code>docker compose up
+# → 5/5 PASS, charts in data/live/
+python -m src.experiments.benchmark_suite</code></pre>
+<p class="s">Prefer video? Upload a 30-s MP4 to YouTube and add a clickable thumbnail in the README — keeps the README fast and gives viewers sound.</p>
+</div>
+</div>
+</div>
+
+<div class="sec" id="beginner">
+<h2>🌱 Beginner guide — read this and you are a professional</h2>
+<p class="s">Let's work this out in a step-by-step way to be sure we have the right answer. No prior chip knowledge needed. Each row takes ~2 minutes.</p>
+<div class="grid g2">
+<div class="step"><b>Step 1 — What is a business model?</b><br/>How a technology earns money and keeps earning it. Example: sell blueprints once + tiny fee per product forever. That “forever” part is the annuity you measure in Experiment 1.</div>
+<div class="step"><b>Step 2 — Digitize vs digitalize vs transform?</b><br/>Scan paper → <i>digitize</i>. Change the process (subscriptions) → <i>digitalize</i>. Change who pays whom in the ecosystem → <i>transform</i>. Experiment 2 gives you 18 examples and a checker that scores 100%.</div>
+<div class="step"><b>Step 3 — Why partners matter more than factories?</b><br/>1000+ companies + 22M developers building on one blueprint = leaving costs more than staying. Experiment 3 draws this network and proves removing the hub breaks 64.7% of it.</div>
+<div class="step"><b>Step 4 — How do trends prove it?</b><br/>New server blueprints ship 2.22× faster than history; research spending rises every year. Experiment 4 fetches live stocks, currencies and R&D to confirm.</div>
+<div class="step"><b>Step 5 — Which model fits YOUR idea?</b><br/>Answer 6 questions (student? startup? volume? need full system or just chip?). Experiment 5 picks: Academic / Flexible / Total Access / Full System / Finished Chip — and tells you when to pivot next.</div>
+<div class="step"><b>Step 6 — What hidden pattern makes you look smart in interviews?</b><br/>Say: “Licensing leads royalties by 2–4 years, so today’s licenses predict 2028 revenue; and each stack step roughly doubles the rate.” Both are measured here.</div>
+</div>
+</div>
+
+<div class="sec">
+<h2>✨ Features — everything in one place</h2>
+<div class="grid g3">
+<div class="card"><b>🧪 5 runnable experiments</b><div class="s">Annuity economics, wording checker, network graph, live trends, model picker. Each prints PASS/FAIL with thresholds.</div></div>
+<div class="card"><b>🔁 Live-data with safe fallback</b><div class="s">Tries Yahoo / ECB / World Bank live; saves whether LIVE or SNAPSHOT so results stay reproducible offline.</div></div>
+<div class="card"><b>🐳 One-command Docker</b><div class="s"><code>docker compose up</code> builds and runs the full suite. No manual setup.</div></div>
+<div class="card"><b>📈 Charts + GIF auto-built</b><div class="s"><code>make_assets.py</code> regenerates 4 PNGs + 119 KB demo GIF. Under GitHub’s 25 MB autoplay limit.</div></div>
+<div class="card"><b>🗺️ Ecosystem map</b><div class="s">17 nodes: cloud, chip makers, factories, tools, governments, startups — with hub/fragmentation scores.</div></div>
+<div class="card"><b>🧭 Picker + pivot advice</b><div class="s">12-scenario benchmark at 100%; tells you when to graduate Flexible → Total → System → Chip.</div></div>
+</div>
+</div>
+
+<div class="sec">
+<h2>👥 User stories — who is this for?</h2>
+<table><tr><th>You are…</th><th>Use it to…</th><th>Start here</th></tr>
+<tr><td>🎓 Student / job seeker</td><td>Speak fluently about licensing, royalties, ecosystems in interviews</td><td>Beginner guide + E2 + E5</td></tr>
+<tr><td>🔧 Engineer with an idea</td><td>Decide: prototype free, pay at production, or buy finished chip?</td><td>E5 picker, then E1 costs</td></tr>
+<tr><td>🚀 Startup founder</td><td>Pitch with numbers: annuity, premium ladder, pipeline math</td><td>Scoreboard + docs/charts/</td></tr>
+<tr><td>🏢 Enterprise strategist</td><td>Compare subscription vs system vs chip on volume/funding</td><td>E5 + E3 network</td></tr>
+<tr><td>🎓 Teacher / PhD</td><td>Assign reproducible lab; extend 6 hidden-pattern hypotheses</td><td>README § Research + papers/</td></tr>
+<tr><td>📊 Analyst</td><td>Refresh live comps (ARM/NVDA/QCOM/INTC) + FX + R&D in one run</td><td>E4 + data/live/*.json</td></tr></table>
+</div>
+
+<div class="sec">
+<h2>🔬 Evidence — charts generated by code</h2>
+<div class="grid g2">
+<div><img src="docs/charts/royalty.png" alt="Royalty annuity chart"/><p class="s">Royalty now exceeds license — the annuity engine.</p></div>
+<div><img src="docs/charts/ladder.png" alt="Premium ladder chart"/><p class="s">Newer blueprints earn multiples per chip.</p></div>
+<div><img src="docs/charts/network.png" alt="Network gravity chart"/><p class="s">Partnership weight concentrates at the hub.</p></div>
+<div><img src="docs/charts/trends.png" alt="R&D trend chart"/><p class="s">Research intensity + server acceleration agree.</p></div>
+</div>
+</div>
+
+<div class="sec" id="quickstart">
+<h2>🚀 Quickstart (2 minutes)</h2>
+<pre><code>git clone &lt;this-repo&gt; &amp;&amp; cd armeducationx-business-models-phd-2026
+docker compose up
+# or without Docker:
+pip install -r requirements.txt
+python -m src.experiments.benchmark_suite
+cat data/live/benchmark_table.md</code></pre>
+<p class="s">Outputs: <code>data/live/e1_*.json … e5_*.json</code>, <code>benchmark_all.json</code>, <code>benchmark_table.md</code>. Open this file (<code>preview.html</code>) in any browser — no server needed.</p>
+<h3>Repo map</h3>
+<pre><code>preview.html / docs/demo.gif / docs/charts/*.png
+src/experiments/live_data.py  — fetch + fallback
+src/experiments/e1_*.py … e5_*.py — the five labs
+src/experiments/benchmark_suite.py — runs all, writes table
+data/live/*.json — proof you can diff
+papers/REFERENCES.md — sources</code></pre>
+</div>
+
+<div class="sec"><h2>📚 Contents</h2><div class="toc">
+<div>• CEO summary (top) • Live scoreboard • Demo • Beginner guide • Features • User stories • Evidence • Quickstart • Experiments deep-dive (in README) • Hidden patterns • Limitations • Contributing • License MIT</div>
+</div></div>
+
+<footer>MIT License — share, remix, teach. Independent study companion, not affiliated with any course provider. Numbers are executed outputs; re-run to refresh. Tip: star ⭐ if the 20-second summary helped.</footer>
+</div>
+<script>
+(function(){var c=document.getElementById('cv'),x=c.getContext('2d'),t=0;
+function f(){x.clearRect(0,0,640,300);x.fillStyle='#0d1330';x.fillRect(0,0,640,300);
+x.strokeStyle='#2a3560';for(var i=1;i<6;i++){x.beginPath();x.moveTo(0,i*50);x.lineTo(640,i*50);x.stroke();}
+x.lineWidth=3;x.strokeStyle='#5B8DEF';x.beginPath();for(var px=0;px<=640;px+=4){var y1=90+24*Math.sin(px/70+t);px==0?x.moveTo(px,y1):x.lineTo(px,y1);}x.stroke();
+x.strokeStyle='#00C49A';x.beginPath();for(var qx=0;qx<=640;qx+=4){var y2=180+24*Math.sin(qx/70+t-0.6);qx==0?x.moveTo(qx,y2):x.lineTo(qx,y2);}x.stroke();
+x.fillStyle='#eef1ff';x.font='bold 15px system-ui';x.fillText('— license (one-time)',20,32);x.fillStyle='#00C49A';x.fillText('— royalty (every chip, 1.13× and rising)',20,54);
+x.fillStyle='#aab3d5';x.font='13px system-ui';x.fillText('Frame '+((t*10|0)%60)+' · compounding loop · see E1',20,282);t+=0.03;requestAnimationFrame(f);}f();})();
+</script>
+</body>
+</html>

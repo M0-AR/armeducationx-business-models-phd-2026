@@ -1,0 +1,92 @@
+{
+  "experiment": "E4_market_trends",
+  "quotes": {
+    "ARM": {
+      "current": 307.49,
+      "last_close": 292.34,
+      "pe_ttm": 316.99,
+      "market_cap": 328398864384,
+      "name": "Arm Holdings plc",
+      "live": true,
+      "ts": "2026-10-03T18:11:08.004899Z"
+    },
+    "NVDA": {
+      "current": 233.95,
+      "last_close": 230.86,
+      "pe_ttm": 29.57,
+      "market_cap": 5649190617088,
+      "name": "NVIDIA Corporation",
+      "live": true,
+      "ts": "2026-10-03T18:11:08.990801Z"
+    },
+    "QCOM": {
+      "current": 184.87,
+      "last_close": 182.09,
+      "pe_ttm": 21.15,
+      "market_cap": 197452333056,
+      "name": "QUALCOMM Incorporated",
+      "live": true,
+      "ts": "2026-10-03T18:11:09.948008Z"
+    },
+    "INTC": {
+      "current": 119.33,
+      "last_close": 120.0,
+      "pe_ttm": 57.86,
+      "market_cap": 630790946816,
+      "name": "Intel Corporation",
+      "live": true,
+      "ts": "2026-10-03T18:11:10.713288Z"
+    }
+  },
+  "fx": {
+    "base": "USD",
+    "rates": {
+      "EUR": 0.89087,
+      "GBP": 0.75753,
+      "JPY": 157.67
+    },
+    "date": "2026-10-02",
+    "live": true
+  },
+  "rd": {
+    "live": true,
+    "latest": {
+      "indicator": {
+        "id": "GB.XPD.RSDV.GD.ZS",
+        "value": "Research and development expenditure (% of GDP)"
+      },
+      "country": {
+        "id": "US",
+        "value": "United States"
+      },
+      "countryiso3code": "USA",
+      "date": "2023",
+      "value": 3.44716,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+    },
+    "series": {
+      "2023": 3.44716,
+      "2022": 3.48736,
+      "2021": 3.4689,
+      "2020": 3.41788,
+      "2019": 3.14297,
+      "2018": 2.98956,
+      "2017": 2.88315,
+      "2016": 2.83677,
+      "2015": 2.77328,
+      "2014": 2.70882
+    }
+  },
+  "neoverse_acceleration_vs_lifetime_avg": 2.22,
+  "royalty_yoy": 2.0,
+  "rd_slope_pp_per_year_2010_2023": 0.0564,
+  "assertions": {
+    "neoverse_accelerating_gt_2x": true,
+    "rd_trend_positive": true,
+    "fx_live_or_snapshot_present": true,
+    "arm_quote_positive": true
+  },
+  "PASS": true
+}
